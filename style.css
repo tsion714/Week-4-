@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap);
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+* {
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    height: 326px;
+    padding: 40px 15px;
+    background-color: gray;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+.header__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.logo__container{
+    transition: all .15s ease;
+    margin-left:0 auto; 
+}
+.logo{
+    width: 100%;
+ max-width: 150px;
+ height: 40px;
+}
+.links{
+    display: flex;
+    width: 100%;
+    max-width: 430px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+a{
+    color: #0a1f44;
+    filter: brightness(0) invert(1);
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 2;
+}
+.content__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+}
+h1{
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 45px;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    color: #fff;
+    line-height: 1.25;
+    z-index: 2;
+}
+.input__wrap{
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 2;
+}
+input{
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    z-index: 2;
+}
+.search__wrapper{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 20px 0 8px;
+    color: black;
+    font-size: 32px;
+transition: all .2s ease;
+}
+.search__wrapper:hover{
+    color: rgb(171, 39, 116);
+}
+.fa-search{
+    width: 1em;
+}
+.overlay{
+    background-image: url(https://media.gq.com/photos/646e3b9a29e926e42d9d858d/16:9/w_2560%2Cc_limit/fnf.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    right: 0;
+    z-index: 1;
+}
+.overlay:after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(53, 45, 66, 0.83);
+pointer-events: none;
+}
+#search{
+    display: flex;
+    position: relative;
+    padding: 40px 20px;
+    flex-direction: column;
+}
+#filter{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search__info{
+    padding: 20px 0;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+.highlight{
+    color: black;
+    display: inline-block;
+}
+#cars{
+    padding-top: 40px;
+}
