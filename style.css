@@ -9,6 +9,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -167,6 +170,41 @@ pointer-events: none;
     color: black;
     display: inline-block;
 }
-#cars{
-    padding-top: 40px;
+.movies__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.movie {
+    margin: 10px;
+}
+.movie__img--wrapper {
+    width: 200px;
+}
+.movie__img {
+    width: 100%;
+}
+.movies__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+  }
+  .movies__loading,
+  .fa-spinner{
+    width: 60px; 
+    height: 60px; 
+    color: black;
+  }
+  .fa-spinner{
+    animation: rotate 800ms infinite linear;}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
