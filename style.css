@@ -145,26 +145,32 @@ bottom: 0;
 background-color: rgba(53, 45, 66, 0.83);
 pointer-events: none;
 }
-#search{
+.filter__section{
     display: flex;
-    position: relative;
-    padding: 40px 20px;
-    flex-direction: column;
+    height: 80px;
 }
-#filter{
+.filter__container{
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
-    flex-wrap: wrap;
+   align-items: center;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .search__info{
-    padding: 20px 0;
+    margin-top: 40px;
     font-size: 28px;
     line-height: 1.25;
     font-weight: 600;
+}
+#filter{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+    font-size: 15px;
 }
 .highlight{
     color: black;
@@ -177,7 +183,8 @@ pointer-events: none;
     padding-top: 20px;
 }
 .movie {
-    margin: 10px;
+    width: 50%;
+    padding: 24px;
 }
 .movie__img--wrapper {
     width: 200px;
@@ -197,6 +204,11 @@ pointer-events: none;
     width: 60px; 
     height: 60px; 
     color: black;
+  }
+  #movies,
+  .movies{
+    display: flex;
+    flex-wrap: wrap;
   }
   .fa-spinner{
     animation: rotate 800ms infinite linear;}

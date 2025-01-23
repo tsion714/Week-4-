@@ -35,12 +35,19 @@
       </div>
       <div class="overlay"></div>
     </div>
-    <section id="search">
-       <div id="filter" class="filter__container">
+    <section>
+      <div class="filter__section">
+       <div class="filter__container">
         <h1 class="search__info"> 
           <span class="highlight">Search results:</span>
         </h1>
-       </div>
+        <select id="filter" onchange="filterMovies(event)">
+          <option value="" disabled selected>Sort</option>
+          <option value="OLD_TO_NEW">Year, Old to New</option>
+          <option value="NEW_TO_OLD">Year, New to Old</option>
+      </select>
+    </div>
+      </div>
 <div id="movies" class="movies">
 </div>
 <div class="movies__loading">
