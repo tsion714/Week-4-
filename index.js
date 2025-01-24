@@ -1,6 +1,6 @@
 let movies = [];
 
-async function loadMovies(filter = '') {
+async function loadMovies(filter = ''){
     const moviesWrapper = document.querySelector('.movies');
     const loadingSpinner = document.querySelector('.movies__loading');
     
@@ -14,6 +14,9 @@ async function loadMovies(filter = '') {
         if (data.Response === 'True') {
             movies = data.Search;
 
+            if (filter) {
+                movies = applyFilter(movies,filter)
+            }
             const moviesHtml = movies
                 .map((movie) => {
                     return `
@@ -39,12 +42,24 @@ async function loadMovies(filter = '') {
         loadingSpinner.style.display = 'none';
     }
 }
+function applyFilter(movies, filter){
+    switch (filter) {
+        case 'OLD_TO_NEW':
+            return movies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+        case 'NEW_TO_OLD':
+            return movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+        default:
+            return movies;
+    }
+}
 
 function filterMovies(event) {
     const filter = event.target.value;
-    loadMovies(filter); 
+    loadMovies(filter);
 
 }
 
 const searchInput = document.querySelector('#movie-search');
 searchInput.addEventListener('input', filterMovies); 
+
+
