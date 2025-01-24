@@ -44,6 +44,10 @@ html{
  max-width: 150px;
  height: 40px;
 }
+.logo[data-v-390ceb07]:hover {
+    -webkit-filter: none;
+    filter: none
+}
 .links{
     display: flex;
     width: 100%;
@@ -61,6 +65,11 @@ a{
     text-decoration: none;
     z-index: 2;
 }
+.links a.btn-contact[data-v-390ceb07]:hover {
+    background-color: #ff328f;
+    color: #fff!important
+}
+
 .content__wrapper{
     display: flex;
     flex-direction: column;
@@ -192,16 +201,13 @@ pointer-events: none;
 .movie__img {
     width: 100%;
 }
-.movies__loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    font-size: 60px;
-  }
+.movies__loading{
+    padding-top: 300px;
+}
   .movies__loading,
   .fa-spinner{
-    width: 60px; 
+    align-items: center;
+    justify-content: center;
     height: 60px; 
     color: black;
   }

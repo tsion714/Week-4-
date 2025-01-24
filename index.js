@@ -3,16 +3,16 @@ let movies = [];
 async function loadMovies(filter = ''){
     const moviesWrapper = document.querySelector('.movies');
     const loadingSpinner = document.querySelector('.movies__loading');
-    
+    const title = document.querySelector('.movie-search').value
 
     loadingSpinner.style.display = 'flex';
     moviesWrapper.innerHTML = '';
     try {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=6d084915&s=fast`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=6d084915&s=${title || ""}`);
         const data = await response.json();
         
         if (data.Response === 'True') {
-            movies = data.Search;
+            movies = data.Search.slice(0,6);
 
             if (filter) {
                 movies = applyFilter(movies,filter)
