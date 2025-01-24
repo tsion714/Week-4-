@@ -8,7 +8,7 @@ async function loadMovies(filter = ''){
     loadingSpinner.style.display = 'flex';
     moviesWrapper.innerHTML = '';
     try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=6d084915&s=fast`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=6d084915&s=fast`);
         const data = await response.json();
         
         if (data.Response === 'True') {
