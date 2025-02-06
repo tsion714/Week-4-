@@ -5,6 +5,12 @@ async function loadMovies(filter = ''){
     const loadingSpinner = document.querySelector('.movies__loading');
     const title = document.querySelector('.movie-search').value
 
+
+    if(title === ''){
+        loadingSpinner.style.display = 'none';
+        moviesWrapper.innerHTML = '';
+        return;
+    }
     loadingSpinner.style.display = 'flex';
     moviesWrapper.innerHTML = '';
     try {
@@ -32,7 +38,7 @@ async function loadMovies(filter = ''){
                 .join("");
             moviesWrapper.innerHTML = moviesHtml;
         } else {
-            moviesWrapper.innerHTML = `<p>No movies found for "fast". Please try a different search term.</p>`;
+            moviesWrapper.innerHTML = `<p>No movies found. Please try a different search term.</p>`;
         }
     } catch (error) {
         console.error("Error fetching movies:", error);

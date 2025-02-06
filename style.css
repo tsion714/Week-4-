@@ -186,7 +186,7 @@ pointer-events: none;
     display: inline-block;
 }
 .movies__loading {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
