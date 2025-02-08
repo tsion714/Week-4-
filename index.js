@@ -69,3 +69,20 @@ const searchInput = document.querySelector('#movie-search');
 searchInput.addEventListener('input', filterMovies); 
 
 
+const toggleMenu = document.querySelector('.toggle-meun');
+const modal = document.querySelector('.modal');
+
+toggleMenu.addEventListener('click', () => {
+   if (modal.style.display === 'flex') {
+    modal.style.display = 'none';
+   } else {
+    modal.style.display = 'flex';
+   }
+});
+
+const modalLinks = document.querySelectorAll('.modal a');
+modalLinks.forEach(link =>{
+    link.addEventListener('click', () => {
+        modal.style.display = 'none';
+    })
+})

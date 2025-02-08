@@ -37,17 +37,20 @@ html{
 }
 .logo__container{
     transition: all .15s ease;
-    margin-left:0 auto; 
+    margin-left:0 auto;
 }
 .logo{
     width: 100%;
  max-width: 150px;
  height: 40px;
+ border-radius: 50%;
 }
 .logo[data-v-390ceb07]:hover {
     -webkit-filter: none;
     filter: none
 }
+
+
 .links{
     display: flex;
     width: 100%;
@@ -56,6 +59,7 @@ html{
     justify-content: space-between;
     z-index: 2;
 }
+
 a{
     color: #0a1f44;
     filter: brightness(0) invert(1);
@@ -224,5 +228,28 @@ pointer-events: none;
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media(max-width:768px){
+    .header{
+        flex-direction: column;
+        padding: 20px 10px;
+        height: auto;
+    }
+    .header__title{
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .logo{
+        max-width: 25px;
+        height: 25px;
+        clip-path: 50%;
+    }
+}
+
+@media (max-width: 515px) {
+    .links{
+        display: none;
     }
 }
